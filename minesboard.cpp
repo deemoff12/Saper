@@ -120,7 +120,7 @@ GameState MinesweeperBoard::getGameState() const{
 
 
 }
-bool MinesweeperBoard::isRevealed(int x, int y) const {
+ bool MinesweeperBoard::isRevealed(int x, int y) const{
         if(board[y][x].hasRevealed)
             return true;
         else

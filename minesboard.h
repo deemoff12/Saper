@@ -37,7 +37,7 @@ public:
 
     bool czyPierwszy() const ;
 
-    bool isRevealed(int x, int y) const;
+    bool isRevealed(int x, int y) const ;
 
     GameState getGameState() const;
 

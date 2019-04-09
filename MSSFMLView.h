@@ -6,16 +6,20 @@
 #define SAPER_MSSFMLVIEW_H
 
 
-#include <SFML/Graphics/RenderWindow.hpp>
+
 #include "minesboard.h"
+#include <SFML/Graphics.hpp>
 
 class MSSFMLView {
 
     MinesweeperBoard & board;
-    int col,row;
-    sf::Vector2f LG;
+
+    sf::Text number;
     int squaresize;
+    int square_pos_x;
+    int square_pos_y;
 public:
+    std::vector<sf::CircleShape> rectangleShape;
     MSSFMLView(MinesweeperBoard& b, float squares, sf::Vector2f start);
     void draw(sf::RenderWindow &win);
 

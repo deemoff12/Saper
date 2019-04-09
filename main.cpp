@@ -1,11 +1,9 @@
 #include <iostream>
-#include "minesboard.h"
 #include "MSBoardTextView.h"
 #include "MSTextController.h"
 #include <ctime>
-#include <SFML/Graphics.hpp>
+
 #include "MSSFMLView.h"
-#include "MSSFMLView.cpp"
 
 
 
@@ -14,10 +12,12 @@ int main()
     sf::RenderWindow window(sf::VideoMode(800, 600), "My window");
     MinesweeperBoard b(9, 7, DEBUG);
     sf::Vector2f LG(50,50);
-    MSSFMLView view(b, 50, LG);
-    b.revealField(3,4);
+    b.revealField(2,4);
+//    b.revealField(4,2);
+//    b.revealField(3,4);
+    b.revealField(4,3);
     b.toggleFlag(4,4);
-
+    MSSFMLView view(b, 50, LG);
     while (window.isOpen())
     {
 
